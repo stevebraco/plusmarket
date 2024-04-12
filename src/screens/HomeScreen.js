@@ -50,7 +50,7 @@ const HomeScreen = () => {
     error: errorList,
   } = productList;
 
-  // const BestProducts = products?.sort((a, b) => b.rating - a.rating)
+  const BestProducts = products?.sort((a, b) => b.rating - a.rating)
 
 
   // const productLast = useSelector((state) => state.productLast);
@@ -221,9 +221,9 @@ const HomeScreen = () => {
         ) : (
           <div>
             <Slider {...settings}>
-              {/* {BestProducts.map((item) => (
+              {BestProducts.map((item) => (
                 <Product key={item._id} item={item} addToCartHandler={addToCartHandler} />
-              ))} */}
+              ))}
             </Slider>
           </div>
         )}
